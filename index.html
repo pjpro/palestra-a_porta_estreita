@@ -22,6 +22,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -36,7 +37,7 @@
 				</section>
 				<!-- 2 -->
 				<section data-background-image="imagens/nuvens.jpg" data-background-opacity="0.3">
-			  	<span  style="color: blue"><small>A PORTA ESTREITA</small><br></span>
+			  <div  style="position: absolute; top: 0; right: 0; color: rgba(0, 0, 255, 0.3)"><small>A PORTA ESTREITA</small><br></div>
           <span class="hljs-name"><strong>3. </strong></span>
 					Entrai pela porta estreita, porque larga é a porta da perdição e espaçoso o caminho que a ela conduz, e muitos são os que por ela entram. – Quão pequena é a porta da vida! quão apertado o caminho que a ela conduz! e quão poucos a encontram!
 					  <span  style="color: blue"> <br><small>(MATEUS, 7:13 e 14)</small></span>
@@ -45,14 +46,15 @@
 				<section>
 					<!-- 3.1 -->
 					<section data-background-image="imagens/nuvens.jpg" data-background-opacity="0.3">
-					 	<span  style="color: blue";><small>A PORTA ESTREITA</small><br></span>
+					 	<!-- <span  style="color: blue";><small>A PORTA ESTREITA</small><br></span> -->
+						<div  style="position: absolute; top: 0; right: 0; color: rgba(0, 0, 255, 0.3)"><small>A PORTA ESTREITA</small><br></div>
 					 	<span class="hljs-name"><strong>4. </strong></span>
 						Tendo-lhe alguém feito esta pergunta: Senhor, serão poucos os que se salvam? Respondeu-lhes ele: – Esforçai-vos por entrar pela porta estreita, pois vos asseguro que muitos procurarão transpô-la e não o poderão. – E quando o pai de família houver entrado e fechado a porta, e vós, de fora, começardes a bater, dizendo: Senhor, abre-nos; ele vos responderá: não sei donde sois. – Pôr-vos-eis a dizer: Comemos e bebemos na tua presença e nos instruíste nas nossas praças públicas. – Ele vos responderá: Não sei donde sois; afastai-vos de mim, todos vós que praticais a iniquidade. (<span class="hljs-name">...</span>)
 					</section>
 
 						<!-- 3.2 -->
 					<section data-background-image="imagens/nuvens.jpg" data-background-opacity="0.3">
-					 	<span style="color: blue"><small>A PORTA ESTREITA</small><br></span>
+					 	<div  style="position: absolute; top: 0; right: 0; color: rgba(0, 0, 255, 0.3)"><small>A PORTA ESTREITA</small><br></div>
 						(<span style="color: #f92672">...</span>)
 						Então, haverá prantos e ranger de dentes, quando virdes que Abraão, lsaac, Jacob e todos os profetas estão no reino de Deus e que vós outros sois dele expelidos. – Virão muitos do Oriente e do Ocidente, do Setentrião e do Meio-Dia, que participarão do festim no reino de Deus. – Então, os que forem últimos serão os primeiros e os que forem primeiros serão os últimos.
 						<span  style="color: blue"> <br><small>(LUCAS, 13:23 a 30)</small></span>
@@ -61,14 +63,14 @@
 
 				<!-- 4 -->
 				<section data-background-image="imagens/nuvens.jpg" data-background-opacity="0.3">
-			  	<span  style="color: blue"><small>A PORTA ESTREITA</small><br></span>
+			  	<div  style="position: absolute; top: 0; right: 0; color: rgba(0, 0, 255, 0.3)"><small>A PORTA ESTREITA</small><br></div>
           <img src="imagens/livre_arbitrio.png">
 				</section>
 
 				<!-- 5 -->
 				<section data-background-image="imagens/nuvens.jpg" data-background-opacity="0.3">
-			  	<span  style="color: blue"><small>A PORTA ESTREITA</small><br></span>
-					<h3> Reencarnação</h3>
+			  	<div  style="position: absolute; top: 0; right: 0; color: rgba(0, 0, 255, 0.4)"><small>A PORTA ESTREITA</small><br></div>
+					<h3 style="color: navy">Reencarnação</h3>
 					<h1>O que levar na viagem?</h1>
 				</section>
 
@@ -104,5 +106,66 @@
 
 			});
 		</script>
+		<!-- PJ -->
+		<style type="text/css">
+    /* 1. Style header/footer <div> so they are positioned as desired. */
+    #header-left {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+				color: blue;
+				font-size: small; // x-small;
+    }
+    #header-right {
+			 position: absolute;
+       display: block;
+       right: 8px;
+       top: : 20px;
+       z-index: 31;
+       font-family: Helvetica, sans-serif;
+       font-size: 12px;
+       line-height: 1;
+       color: #fff;
+       background-color: rgba(0, 0, 0, 0.4);
+       padding: 5px; }
+			/*
+        position: absolute;
+        top: 0%;
+        right: 0%;
+				color: blue;
+				font-size: small; // x-small; */
+    }
+    #footer-left {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+				color: blue;
+				font-size: small; // x-small;
+    }
+</style>
+
+<!-- 2. Create hidden header/footer <div> -->
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <!-- <div id="header-left">HEADER-LEFT</div> -->
+        <div id="header-right">A PORTA ESTREITA</div>
+        <!-- <div id="footer-left">FOOTER-LEFT</div> -->
+    </div>
+</div>
+
+<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+<script type="text/javascript">
+    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+    var header = $('#header').html();
+    if ( window.location.search.match( /print-pdf/gi ) ) {
+        Reveal.addEventListener( 'ready', function( event ) {
+            $('.slide-background').append(header);
+        });
+    }
+    else {
+        $('div.reveal').append(header);
+   }
+</script> <!-- /PJ -->
+
 	</body>
 </html>
